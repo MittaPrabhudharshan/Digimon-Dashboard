@@ -3,7 +3,7 @@ import DigimonCard from '../DigimonCard/DigimonCard'
 import "./digimons.css"
 
 export default function Digimons() {
-
+    
     const [digimon, setDigimon] = useState([])
     const [page, setPage] = useState(0)
 
@@ -18,6 +18,7 @@ export default function Digimons() {
 
     return (
         <>
+    
             <div className="pagination">
                 <button 
                     onClick={() => setPage(prev => Math.max(prev - 1, 0))}
