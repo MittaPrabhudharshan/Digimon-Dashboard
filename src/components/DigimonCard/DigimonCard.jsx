@@ -1,5 +1,5 @@
 import React from "react";
-import "./digimonCard.css";
+import "./digimoncard.css";
 import { useNavigate } from "react-router";
 
 export default function DigimonCard({ image, name ,id }) {
