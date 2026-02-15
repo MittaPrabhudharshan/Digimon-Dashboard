@@ -8,7 +8,7 @@ export default function Navbar() {
 
       <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="/counter">Counter</Link>
+        <Link to="/digimon-search">Search</Link>
       </div>
     </nav>
   );

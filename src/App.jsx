@@ -6,6 +6,7 @@ import Counter from './components/Counter/Counter'
 import { Link, Route, Routes } from 'react-router'
 import Navbar from './components/Navbar/Navbar'
 import DigimonsDetails from './components/DigimonDetails/DigimonsDetails'
+import SearchDigimon from './components/SearchDigimon/SearchDigimon'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
        
       <Routes>
         <Route path="/"  element={<Digimons />}/>
-        <Route path="/counter" element={<Counter />}/>
+        <Route path="/digimon-search" element={<SearchDigimon />}/>
         <Route path="/digimons-details/:id" element={<DigimonsDetails />}/>
       </Routes>
     </div>

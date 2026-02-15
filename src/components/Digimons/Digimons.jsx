@@ -42,6 +42,7 @@ export default function Digimons() {
                             key={val.id} 
                             image={val.image} 
                             name={val.name}
+                            id={val.id}
                         />
                     ))
                 }
