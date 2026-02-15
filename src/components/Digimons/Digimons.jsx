@@ -1,43 +1,50 @@
 import React, { useEffect, useState } from 'react'
 import DigimonCard from '../DigimonCard/DigimonCard'
 import "./digimons.css"
+
 export default function Digimons() {
 
-    let [digimon, setDigimon] = useState(null)
-    let [page, setPage] = useState(0)
+    const [digimon, setDigimon] = useState([])
+    const [page, setPage] = useState(0)
 
-    function fetchData() {
+    useEffect(() => {
         fetch(`https://digi-api.com/api/v1/digimon?page=${page}`)
             .then((res) => res.json())
             .then(data => {
-                console.log(data)
                 setDigimon(data.content)
             })
-    }
-
-
-    useEffect(() => {
-        console.log("hello")
-        fetchData()
+            .catch(err => console.log(err))
     }, [page])
-
 
     return (
         <>
-            <div>
-                <button onClick={() => setPage(--page)}>Back</button>
-                <button onClick={() => setPage(++page)}>Next</button>
+            <div className="pagination">
+                <button 
+                    onClick={() => setPage(prev => Math.max(prev - 1, 0))}
+                >
+                    Back
+                </button>
+
+                <span>Page: {page}</span>
+
+                <button 
+                    onClick={() => setPage(prev => prev + 1)}
+                >
+                    Next
+                </button>
             </div>
+
             <div className='card-container'>
                 {
-                    digimon?.map((val) => {
-                        return (
-                            <DigimonCard key={val.image} image={val.image} name={val.name}/>
-                        )
-                    })
+                    digimon.map((val) => (
+                        <DigimonCard 
+                            key={val.id} 
+                            image={val.image} 
+                            name={val.name}
+                        />
+                    ))
                 }
             </div>
-           
         </>
     )
 }
