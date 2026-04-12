@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import DigimonCard from "../DigimonCard/DigimonCard";
+// SearchDigimon.jsx
+import './searchDigimon.css'
 
 export default function SearchDigimon() {
     const [digimon, setDigimon] = useState(null);
