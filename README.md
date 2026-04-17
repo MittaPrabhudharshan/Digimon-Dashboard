@@ -27,12 +27,12 @@ A React-based web application that provides a comprehensive dashboard for explor
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Attull/digimon-dasboard.git
+   git clone https://github.com/MittaPrabhudharshan/Digimon-Dashboard.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd digimon-dasboard
+   cd digimon-dashboard
    ```
 
 3. Install dependencies:
