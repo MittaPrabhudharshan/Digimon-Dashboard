@@ -1,16 +1,87 @@
-# React + Vite
+# Digimon Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that provides a comprehensive dashboard for exploring Digimon characters. Built with Vite for fast development and React Router for navigation.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Browse Digimons**: View a paginated list of Digimon characters with their images and names.
+- **Search Functionality**: Search for specific Digimons by name.
+- **Detailed Views**: Click on any Digimon to view detailed information.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React**: Frontend library for building user interfaces.
+- **Vite**: Build tool for fast development and optimized production builds.
+- **React Router**: For client-side routing.
+- **Digi-API**: External API for fetching Digimon data (https://digi-api.com/api/v1/digimon).
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Attull/digimon-dasboard.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd digimon-dasboard
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and visit `http://localhost:5173` (or the port shown in the terminal).
+
+### Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the project for production
+- `npm run preview` - Preview the production build locally
+- `npm run lint` - Run ESLint for code linting
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── DigimonCard/      # Individual Digimon card component
+│   ├── Digimons/         # Main list view with pagination
+│   ├── DigimonDetails/   # Detailed view for a single Digimon
+│   ├── Navbar/           # Navigation bar
+│   └── SearchDigimon/    # Search functionality
+├── App.jsx               # Main app component with routing
+├── main.jsx              # Entry point
+└── index.css             # Global styles
+```
+
+## API Usage
+
+This application uses the Digi-API (https://digi-api.com/) to fetch Digimon data. The API provides information about various Digimon characters including their names, images, and attributes.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the ISC License.
+
+## Acknowledgments
+
+- Digi-API for providing the Digimon data
+- Vite and React communities for excellent documentation and tools
